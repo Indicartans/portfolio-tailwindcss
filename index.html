@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alfa Indica</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <link rel="icon" href="src/img/putih.png" type="image/png" sizes="16x16"/>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/ee542f3def.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="scroll-smooth">
+    <header
+      class="flex justify-between items-center p-4 bg-gray-600 text-white w-1/2 mx-auto rounded-2xl light-shadow fixed top-5 right-0 left-0 z-10"
+    >
+      <div class="w-1/3 flex items-center gap-4">
+        <a href="#home">
+          <img src="src/img/putih.png" alt="image" class="w-10" />
+        </a>
+      </div>
+
+      <nav class="w-2/3">
+        <ul class="flex items-center gap-4">
+          <li><a href="#about">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#project">Project</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex justify-end items-center gap-2">
+        <a href="">
+          <div class="flex justify-center items-center py-2 px-3 rounded-lg gap-2 border-2 border-white">
+            <div class="bg-white text-gray-600 p-1 rounded-full w-6 h-6 flex justify-center items-center">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            Contacts
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section
+        class="section relative flex-col overflow-hidden gap-20 justify-end items-center bg-gray-800" id="home"
+      >
+        <div
+          class="absolute bottom-10 left-1/4 w-96 h-96 bg-blue-500 opacity-30 rounded-3xl blur-3xl transform animate-spin-slow"
+        ></div>
+        <div
+          class="absolute bottom-10 right-1/4 w-96 h-96 bg-red-500 opacity-20 rounded-2xl blur-3xl animate-spin-slow-reverse"
+        ></div>
+        <div class="decoration-icon -rotate-12 bottom-1/4 left-1/4">
+          <img class="w-10" src="/src/img/dev.png" alt="dev icon" />
+        </div>
+        <div class="decoration-icon rotate-12 right-40 bottom-1/3">
+          <img class="w-10" src="/src/img/dino.png" alt="dev icon" />
+        </div>
+        <div class="decoration-icon rotate-12 bottom-20 left-40">
+          <img class="w-10" src="src/img/termux.png" alt="termux" />
+        </div>
+        <div class="decoration-icon -rotate-12 bottom-20 right-1/4">
+          <img class="w-10" src="src/img/www.png" alt="termux" />
+        </div>
+
+        <div
+          class="text-4xl font-medium text-gray-200 text-center flex flex-col gap-4"
+        >
+          <h1>
+            i'm
+            <span class="text-lime-200 text-shadow-md font-black"
+              >Alfa Indica Dzoriful Khazim</span
+            >
+          </h1>
+          <h1>Web Developer</h1>
+        </div>
+        <div class="relative flex justify-center w-full">
+          <img class="max-w-full" src="src/img/profile.png" alt="image profile" />
+          <div
+            class="w-full h-1/2 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 to-transparent"
+          ></div>
+        </div>
+      </section>
+
+      <!-- about me -->
+      <section
+        class="section justify-center items-center relative bg-gradient-to-b from-gray-800 to-gray-950 p-6" id="about"
+      >
+        <div class="text-center text-gray-200 flex flex-col gap-4 p-4 w-1/2">
+          <h1 class="title">
+            WHO AM I?
+          </h1>
+          <p class="text-lg">
+            An experienced Web Developer specializing in building dynamic and
+            efficient web applications using Laravel, PHP, and JavaScript.
+            Skilled in designing and developing RESTful APIs for
+            system-to-system communication and familiar with integrating
+            third-party services, such as payment gateways. Proficient in
+            working with modular and scalable approaches, and capable of
+            completing projects from design to implementation with a focus on
+            performance and security.
+          </p>
+
+          <p class="text-lg">
+            In addition, I am always enthusiastic about learning the latest
+            technological developments to continuously improve quality and
+            efficiency in web development. I have a strong work ethic, adapt
+            quickly to project requirements, and am able to work independently
+            or in a team. Commitment to code quality and user satisfaction is a
+            top priority in every project I work on.
+          </p>
+        </div>
+      </section>
+
+      <!-- my skills -->
+      <section
+        class="section flex-col gap-4 bg-gray-950 justify-center items-center p-6" id="skills"
+      >
+        <h1 class="title mb-4">
+          MY SKILLS
+        </h1>
+        <div class="flex w-2/3 flex-wrap gap-8 justify-center">
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img
+                class="w-32 h-auto"
+                src="src/img/skills/html.svg"
+                alt="HTML"
+              />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img class="w-32" src="src/img/skills/css.svg" alt="CSS" />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img
+                class="w-32"
+                src="src/img/skills/laravel.svg"
+                alt="Laravel"
+              />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img class="w-32" src="src/img/skills/js.svg" alt="JavaScript" />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img class="w-32" src="src/img/skills/php.png" alt="PHP" />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img class="w-32" src="src/img/skills/github.svg" alt="GitHub" />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img
+                class="w-32"
+                src="src/img/skills/bootstrap.png"
+                alt="Bootstrap"
+              />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img
+                class="w-32"
+                src="src/img/skills/tailwindcss.png"
+                alt="Tailwind"
+              />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img
+                class="w-32"
+                src="src/img/skills/git.png"
+                alt="Tailwind"
+              />
+            </div>
+            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+              <img
+                class="w-32"
+                src="src/img/skills/node-js.png"
+                alt="Tailwind"
+              />
+            </div>
+        </div>
+      </section>
+
+      <!-- experiences -->
+       <section class="section bg-gray-950 flex-col justify-center items-center" id="experiences">
+          <h1 class="title mb-8">Work Experiences</h1>
+          <div class="flex justify-between w-3/4 mb-8">
+            <div class="experiences-card light-shadow text-gray-100">
+              <img class="w-28" src="src/img/experiences/abarobotics.png" alt="abarobotics">
+              <div class="flex-col gap-4">
+                <div class="flex gap-6 items-center justify-between">
+                    <h6 class="text-xl font-medium">PT Asta Berkah Autonomus</h6>
+                    <p class="text-sm text-gray-400">Oct 2024-Present</p>
+                </div>
+                <div class="w-full">
+                  <p class="text-sm text-gray-400">Web Developer</p>
+                  <p class="text-md text-gray-300 font-medium">Maintained and enhanced a Laravel-based parking management system by developing new features, integrating with embedded systems via RESTful APIs, optimizing performance, and handling deployments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between w-3/4 mb-4">
+            <div></div>
+            <div class="experiences-card light-shadow text-gray-100">
+              <div class="flex-col gap-4">
+                <div class="flex gap-6 items-center justify-between">
+                    <h6 class="text-xl font-medium">PT Coco Profire Indonesia</h6>
+                    <p class="text-sm text-gray-400">Sept 2023-Jan 2024</p>
+                </div>
+                <div class="w-full">
+                  <p class="text-sm text-gray-400">Web Developer-intern</p>
+                  <p class="text-md text-gray-300 font-medium">Developing a web application for managing company product inventory using the Laravel framework, with features, CRUD operations, and reporting.</p>
+                </div>
+              </div>
+              <img class="w-28" src="src/img/experiences/pemapi.png" alt="pemapi">
+            </div>
+          </div>
+       </section>
+
+       <!-- project -->
+      <section class="relative section flex flex-col justify-center items-center gap-4 bg-gray-950 text-gray-300 p-4" id="project">
+        <h1 class="title">What I've Built</h1>
+
+        <!-- Wrapper Carousel -->
+        <div class="relative w-full max-w-6xl mx-auto overflow-hidden max-h-[500px]">
+          <!-- Track Slide -->
+          <div id="slider" class="flex transition-transform duration-500 ease-in-out w-full">
+            
+            <!-- Project 1: Asta Smart Parking -->
+            <div class="card-project card-project w-full shrink-0 flex justify-center px-4">
+              <div class="flex justify-center gap-4 items-center">
+                <div class="w-1/3">
+                  <img class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4" src="src/img/project/asta-parking.png" alt="asta-parking-image">
+                </div>
+                <div class="w-2/3">
+                  <h1 class="title-project">Asta Smart Parking</h1>
+                  <p class="text-justify">
+                    Developed REST APIs for LPR-based automatic parking system, integrating with embedded systems and mobile apps. Also built web-based financial reports and optimized SQL queries for better server performance.
+                  </p>
+                  <div class="flex flex-col gap-2 w-full justify-start">
+                    <div class="flex gap-2 items-center mt-4">
+                      <p class="text-sm font-semibold">Developed with:</p>
+                      <i class="fa-brands fa-laravel"></i>
+                      <i class="fa-brands fa-bootstrap"></i>
+                      <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div>
+                      <!-- <button class="btn-preview"><a href="#">Show Preview</a></button> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- sipenting -->
+             <div class="card-project card-project w-full shrink-0 flex justify-center px-4">
+              <div class="flex justify-center gap-4 items-center">
+                <div class="w-1/3">
+                  <img class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4" src="src/img/project/sipenting.png" alt="asta-parking-image">
+                </div>
+                <div class="w-2/3">
+                  <h1 class="title-project">Sipenting</h1>
+                  <p class="text-justify">
+                    A web-based expert system application that can diagnose potential stunting in children based on symptoms entered by users.
+                    This is my final project at Semarang State Polytechnic and was developed using the Certainty Factor method.
+                  </p>
+                  <div class="flex flex-col gap-2 w-full justify-start">
+                    <div class="flex gap-2 items-center mt-4">
+                      <p class="text-sm font-semibold">Developed with:</p>
+                      <i class="fa-brands fa-laravel"></i>
+                      <i class="fa-brands fa-bootstrap"></i>
+                      <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div>
+                      <button class="btn-preview"><a href="https://github.com/Indicartans/SiPenting_Sistem-pakar-pendeteksi-stunting  " target="_blank">Source Code</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- pemapistock -->
+            <div class="card-project card-project w-full shrink-0 flex justify-center px-4">
+              <div class="flex justify-center gap-4 items-center">
+                <div class="w-1/3">
+                  <img class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4" src="src/img/project/pemapi.png" alt="asta-parking-image">
+                </div>
+                <div class="w-2/3">
+                  <h1 class="title-project">Pemapistock</h1>
+                  <p class="text-justify">
+                    Developed a warehouse management system for inventory, purchasing, and sales at PT Coco Profire Indonesia. Includes real-time stock tracking, goods receipt management, and detailed transaction reports.
+                  </p>
+                  <div class="flex flex-col gap-2 w-full justify-start">
+                    <div class="flex gap-2 items-center mt-4">
+                      <p class="text-sm font-semibold">Developed with:</p>
+                      <i class="fa-brands fa-laravel"></i>
+                      <i class="fa-brands fa-bootstrap"></i>
+                      <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div>
+                      <button class="btn-preview"><a href="https://github.com/wahyuindra11/stock_app_pempi" target="_blank">Source Code</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+        </div>
+        <button onclick="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-l shadow-md">←</button>
+        <button onclick="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-r shadow-md">→</button>
+      </section>
+
+      <section class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300">
+        <h1 class="title">Thanks for coming!</h1>
+
+        <div class="flex-col gap-4 text-center w-2/3 text-lg font-medium">
+          <p>I hope we can work together and create something that is not only big, but also meaningful and impactful.</p>
+          <br>
+          <p>If you’re working on an exciting project, need a partner, or just want to chat casually about technology (or vent about those pesky bugs you can’t seem to find), feel free to reach out.</p>
+          <br>
+          <p>Who knows, our conversation might be the start of the next awesome project. Cheers! 😄</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-b from-gray-950 to-gray-800 text-gray-200 text-center p-4">
+      <p>&copy; 2025 Alfa Indica Dzoriful Khazim - Made with code & some coffee</p>
+      <br>
+      <p class="mb-4">Got new idea? let's discuss it together!</p>
+      <div class="text-4xl flex gap-6 justify-center items-center">
+        <a href="https://www.linkedin.com/in/alfaindica/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/alfaindicadz" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://github.com/indicartans" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <br>
+      <p class="italic">&quot;Copy, Paste, and run it!&quot;</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

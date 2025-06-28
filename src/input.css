@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.decoration-icon {
+  @apply absolute p-4 bg-gray-800 shadow-[0_0_35px_rgba(210,210,210,0.2)] rounded-xl;
+}
+
+.section {
+  @apply w-full h-screen flex;
+}
+
+.light-shadow {
+  @apply shadow-[0_0_35px_rgba(210,210,210,0.2)];
+}
+
+.title {
+  @apply text-4xl text-lime-200 font-black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.experiences-card {
+  @apply bg-gray-800 flex gap-2 p-4 rounded-xl max-w-4xl justify-between;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 20s linear infinite;
+}
+
+.slider {
+  animation: slide-left 20s linear infinite;
+}
+
+/* animation slide left */
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* project */
+.title-project {
+  @apply font-bold text-xl;
+}
+
+.btn-preview {
+  @apply bg-lime-200 text-gray-950 p-2 rounded-md font-bold;
+}
+
+.card-project {
+  @apply bg-gray-800 text-gray-300 rounded-2xl py-6;
+}
