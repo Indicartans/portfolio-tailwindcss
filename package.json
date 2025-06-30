@@ -2,8 +2,8 @@
   "name": "portfolio-tailwindcss",
   "version": "1.0.0",
   "scripts": {
-    "dev":   "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "dev":   "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./public/output.css --minify",
     "postinstall": "chmod +x ./node_modules/.bin/tailwindcss"
   },
   "devDependencies": {
