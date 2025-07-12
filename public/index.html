@@ -6,7 +6,7 @@
     <title>Alfa Indica</title>
     <link href="./output.css" rel="stylesheet" />
 
-    <link rel="icon" href="src/img/putih.png" type="image/png" sizes="16x16"/>
+    <link rel="icon" href="src/img/putih.png" type="image/png" sizes="16x16" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,40 +24,55 @@
   </head>
 
   <body class="scroll-smooth">
-    <header
-      class="flex justify-between items-center p-4 bg-gray-600 text-white w-1/2 mx-auto rounded-2xl light-shadow fixed top-5 right-0 left-0 z-10"
-    >
-      <div class="w-1/3 flex items-center gap-4">
-        <a href="#home">
-          <img src="src/img/putih.png" alt="image" class="w-10" />
-        </a>
-      </div>
+    <header>
+      <nav class="w-full md:flex fixed top-0 right-0 left-0 z-50 md:px-4 text-white bg-gray-800 md:w-2/3 md:mx-auto md:rounded-2xl md:top-4">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <img src="src/img/putih.png" alt="logo" class="w-10 h-10"/>
+            <button onclick="showMobileMenu()" class="text-2xl md:hidden">
+              <i id="menu-button" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="hidden md:flex justify-center items-center text-lg">
+          <ul class="flex gap-4">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#experiences">Experiences</a>
+            </li>
+            <li>
+              <a href="#project">Projects</a>
+            </li>
+          </ul>
+        </div>
 
-      <nav class="w-2/3">
-        <ul class="flex items-center gap-4">
-          <li><a href="#about">About me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experiences">Experiences</a></li>
-          <li><a href="#project">Project</a></li>
-        </ul>
+        <div id="mobile-menu" class="absolute w-full z-10 text-white bg-gray-800 text-center py-4 transform -translate-y-[400px] transition-transform duration-500 md:hidden">
+          <ul class="flex flex-col justify-between items-center gap-4">
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#experiences">Experiences</a>
+            </li>
+            <li>
+              <a href="#project">Projects</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-
-      <div class="flex justify-end items-center gap-2">
-        <a href="">
-          <div class="flex justify-center items-center py-2 px-3 rounded-lg gap-2 border-2 border-white">
-            <div class="bg-white text-gray-600 p-1 rounded-full w-6 h-6 flex justify-center items-center">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            Contacts
-          </div>
-        </a>
-      </div>
     </header>
 
     <main>
       <!-- hero section -->
       <section
-        class="section relative flex-col overflow-hidden gap-20 justify-end items-center bg-gray-800" id="home"
+        class="section relative flex-col overflow-hidden gap-20 justify-end items-center bg-gray-800"
+        id="home"
       >
         <div
           class="absolute bottom-10 left-1/4 w-96 h-96 bg-blue-500 opacity-30 rounded-3xl blur-3xl transform animate-spin-slow"
@@ -90,7 +105,11 @@
           <h1>Web Developer</h1>
         </div>
         <div class="relative flex justify-center w-full">
-          <img class="max-w-full" src="src/img/profile.png" alt="image profile" />
+          <img
+            class="max-w-full"
+            src="src/img/profile.png"
+            alt="image profile"
+          />
           <div
             class="w-full h-1/2 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 to-transparent"
           ></div>
@@ -99,12 +118,13 @@
 
       <!-- about me -->
       <section
-        class="section justify-center items-center relative bg-gradient-to-b from-gray-800 to-gray-950 p-6" id="about"
+        class="section justify-center items-center relative bg-gradient-to-b from-gray-800 to-gray-950 p-6"
+        id="about"
       >
-        <div class="text-center text-gray-200 flex flex-col gap-4 p-4 w-1/2">
-          <h1 class="title">
-            WHO AM I?
-          </h1>
+        <div
+          class="hidden text-center text-gray-200 flex flex-col gap-4 p-4 w-1/2"
+        >
+          <h1 class="title">WHO AM I?</h1>
           <p class="text-lg">
             An experienced Web Developer specializing in building dynamic and
             efficient web applications using Laravel, PHP, and JavaScript.
@@ -129,125 +149,144 @@
 
       <!-- my skills -->
       <section
-        class="section flex-col gap-4 bg-gray-950 justify-center items-center p-6" id="skills"
+        class="section flex-col gap-4 bg-gray-950 justify-center items-center p-6"
+        id="skills"
       >
-        <h1 class="title mb-4">
-          MY SKILLS
-        </h1>
+        <h1 class="title mb-4">MY SKILLS</h1>
         <div class="flex w-2/3 flex-wrap gap-8 justify-center">
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img
-                class="w-32 h-auto"
-                src="src/img/skills/html.svg"
-                alt="HTML"
-              />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img class="w-32" src="src/img/skills/css.svg" alt="CSS" />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img
-                class="w-32"
-                src="src/img/skills/laravel.svg"
-                alt="Laravel"
-              />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img class="w-32" src="src/img/skills/js.svg" alt="JavaScript" />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img class="w-32" src="src/img/skills/php.png" alt="PHP" />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img class="w-32" src="src/img/skills/github.svg" alt="GitHub" />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img
-                class="w-32"
-                src="src/img/skills/bootstrap.png"
-                alt="Bootstrap"
-              />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img
-                class="w-32"
-                src="src/img/skills/tailwindcss.png"
-                alt="Tailwind"
-              />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img
-                class="w-32"
-                src="src/img/skills/git.png"
-                alt="Tailwind"
-              />
-            </div>
-            <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
-              <img
-                class="w-32"
-                src="src/img/skills/node-js.png"
-                alt="Tailwind"
-              />
-            </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32 h-auto" src="src/img/skills/html.svg" alt="HTML" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/css.svg" alt="CSS" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/laravel.svg" alt="Laravel" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/js.svg" alt="JavaScript" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/php.png" alt="PHP" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/github.svg" alt="GitHub" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img
+              class="w-32"
+              src="src/img/skills/bootstrap.png"
+              alt="Bootstrap"
+            />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img
+              class="w-32"
+              src="src/img/skills/tailwindcss.png"
+              alt="Tailwind"
+            />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/git.png" alt="Tailwind" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-2xl light-shadow">
+            <img class="w-32" src="src/img/skills/node-js.png" alt="Tailwind" />
+          </div>
         </div>
       </section>
 
       <!-- experiences -->
-       <section class="section bg-gray-950 flex-col justify-center items-center" id="experiences">
-          <h1 class="title mb-8">Work Experiences</h1>
-          <div class="flex justify-between w-3/4 mb-8">
-            <div class="experiences-card light-shadow text-gray-100">
-              <img class="w-28" src="src/img/experiences/abarobotics.png" alt="abarobotics">
-              <div class="flex-col gap-4">
-                <div class="flex gap-6 items-center justify-between">
-                    <h6 class="text-xl font-medium">PT Asta Berkah Autonomus</h6>
-                    <p class="text-sm text-gray-400">Oct 2024-Present</p>
-                </div>
-                <div class="w-full">
-                  <p class="text-sm text-gray-400">Web Developer</p>
-                  <p class="text-md text-gray-300 font-medium">Maintained and enhanced a Laravel-based parking management system by developing new features, integrating with embedded systems via RESTful APIs, optimizing performance, and handling deployments.</p>
-                </div>
+      <section
+        class="section bg-gray-950 flex-col justify-center items-center"
+        id="experiences"
+      >
+        <h1 class="title mb-8">Work Experiences</h1>
+        <div class="flex justify-between w-3/4 mb-8">
+          <div class="experiences-card light-shadow text-gray-100">
+            <img
+              class="w-28"
+              src="src/img/experiences/abarobotics.png"
+              alt="abarobotics"
+            />
+            <div class="flex-col gap-4">
+              <div class="flex gap-6 items-center justify-between">
+                <h6 class="text-xl font-medium">PT Asta Berkah Autonomus</h6>
+                <p class="text-sm text-gray-400">Oct 2024-Present</p>
+              </div>
+              <div class="w-full">
+                <p class="text-sm text-gray-400">Web Developer</p>
+                <p class="text-md text-gray-300 font-medium">
+                  Maintained and enhanced a Laravel-based parking management
+                  system by developing new features, integrating with embedded
+                  systems via RESTful APIs, optimizing performance, and handling
+                  deployments.
+                </p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="flex justify-between w-3/4 mb-4">
-            <div></div>
-            <div class="experiences-card light-shadow text-gray-100">
-              <div class="flex-col gap-4">
-                <div class="flex gap-6 items-center justify-between">
-                    <h6 class="text-xl font-medium">PT Coco Profire Indonesia</h6>
-                    <p class="text-sm text-gray-400">Sept 2023-Jan 2024</p>
-                </div>
-                <div class="w-full">
-                  <p class="text-sm text-gray-400">Web Developer-intern</p>
-                  <p class="text-md text-gray-300 font-medium">Developing a web application for managing company product inventory using the Laravel framework, with features, CRUD operations, and reporting.</p>
-                </div>
+        <div class="flex justify-between w-3/4 mb-4">
+          <div></div>
+          <div class="experiences-card light-shadow text-gray-100">
+            <div class="flex-col gap-4">
+              <div class="flex gap-6 items-center justify-between">
+                <h6 class="text-xl font-medium">PT Coco Profire Indonesia</h6>
+                <p class="text-sm text-gray-400">Sept 2023-Jan 2024</p>
               </div>
-              <img class="w-28" src="src/img/experiences/pemapi.png" alt="pemapi">
+              <div class="w-full">
+                <p class="text-sm text-gray-400">Web Developer-intern</p>
+                <p class="text-md text-gray-300 font-medium">
+                  Developing a web application for managing company product
+                  inventory using the Laravel framework, with features, CRUD
+                  operations, and reporting.
+                </p>
+              </div>
             </div>
+            <img
+              class="w-28"
+              src="src/img/experiences/pemapi.png"
+              alt="pemapi"
+            />
           </div>
-       </section>
+        </div>
+      </section>
 
-       <!-- project -->
-      <section class="relative section flex flex-col justify-center items-center gap-4 bg-gray-950 text-gray-300 p-4" id="project">
+      <!-- project -->
+      <section
+        class="relative section flex flex-col justify-center items-center gap-4 bg-gray-950 text-gray-300 p-4"
+        id="project"
+      >
         <h1 class="title">What I've Built</h1>
 
         <!-- Wrapper Carousel -->
-        <div class="relative w-full max-w-6xl mx-auto overflow-hidden max-h-[500px]">
+        <div
+          class="relative w-full max-w-6xl mx-auto overflow-hidden max-h-[500px]"
+        >
           <!-- Track Slide -->
-          <div id="slider" class="flex transition-transform duration-500 ease-in-out w-full">
-            
+          <div
+            id="slider"
+            class="flex transition-transform duration-500 ease-in-out w-full"
+          >
             <!-- Project 1: Asta Smart Parking -->
-            <div class="card-project card-project w-full shrink-0 flex justify-center px-4">
+            <div
+              class="card-project card-project w-full shrink-0 flex justify-center px-4"
+            >
               <div class="flex justify-center gap-4 items-center">
                 <div class="w-1/3">
-                  <img class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4" src="src/img/project/asta-parking.png" alt="asta-parking-image">
+                  <img
+                    class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4"
+                    src="src/img/project/asta-parking.png"
+                    alt="asta-parking-image"
+                  />
                 </div>
                 <div class="w-2/3">
                   <h1 class="title-project">Asta Smart Parking</h1>
                   <p class="text-justify">
-                    Developed REST APIs for LPR-based automatic parking system, integrating with embedded systems and mobile apps. Also built web-based financial reports and optimized SQL queries for better server performance.
+                    Developed REST APIs for LPR-based automatic parking system,
+                    integrating with embedded systems and mobile apps. Also
+                    built web-based financial reports and optimized SQL queries
+                    for better server performance.
                   </p>
                   <div class="flex flex-col gap-2 w-full justify-start">
                     <div class="flex gap-2 items-center mt-4">
@@ -265,16 +304,25 @@
             </div>
 
             <!-- sipenting -->
-             <div class="card-project card-project w-full shrink-0 flex justify-center px-4">
+            <div
+              class="card-project card-project w-full shrink-0 flex justify-center px-4"
+            >
               <div class="flex justify-center gap-4 items-center">
                 <div class="w-1/3">
-                  <img class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4" src="src/img/project/sipenting.png" alt="asta-parking-image">
+                  <img
+                    class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4"
+                    src="src/img/project/sipenting.png"
+                    alt="asta-parking-image"
+                  />
                 </div>
                 <div class="w-2/3">
                   <h1 class="title-project">Sipenting</h1>
                   <p class="text-justify">
-                    A web-based expert system application that can diagnose potential stunting in children based on symptoms entered by users.
-                    This is my final project at Semarang State Polytechnic and was developed using the Certainty Factor method.
+                    A web-based expert system application that can diagnose
+                    potential stunting in children based on symptoms entered by
+                    users. This is my final project at Semarang State
+                    Polytechnic and was developed using the Certainty Factor
+                    method.
                   </p>
                   <div class="flex flex-col gap-2 w-full justify-start">
                     <div class="flex gap-2 items-center mt-4">
@@ -284,7 +332,13 @@
                       <i class="fa-brands fa-js"></i>
                     </div>
                     <div>
-                      <button class="btn-preview"><a href="https://github.com/Indicartans/SiPenting_Sistem-pakar-pendeteksi-stunting  " target="_blank">Source Code</a></button>
+                      <button class="btn-preview">
+                        <a
+                          href="https://github.com/Indicartans/SiPenting_Sistem-pakar-pendeteksi-stunting  "
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -292,15 +346,24 @@
             </div>
 
             <!-- pemapistock -->
-            <div class="card-project card-project w-full shrink-0 flex justify-center px-4">
+            <div
+              class="card-project card-project w-full shrink-0 flex justify-center px-4"
+            >
               <div class="flex justify-center gap-4 items-center">
                 <div class="w-1/3">
-                  <img class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4" src="src/img/project/pemapi.png" alt="asta-parking-image">
+                  <img
+                    class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4"
+                    src="src/img/project/pemapi.png"
+                    alt="asta-parking-image"
+                  />
                 </div>
                 <div class="w-2/3">
                   <h1 class="title-project">Pemapistock</h1>
                   <p class="text-justify">
-                    Developed a warehouse management system for inventory, purchasing, and sales at PT Coco Profire Indonesia. Includes real-time stock tracking, goods receipt management, and detailed transaction reports.
+                    Developed a warehouse management system for inventory,
+                    purchasing, and sales at PT Coco Profire Indonesia. Includes
+                    real-time stock tracking, goods receipt management, and
+                    detailed transaction reports.
                   </p>
                   <div class="flex flex-col gap-2 w-full justify-start">
                     <div class="flex gap-2 items-center mt-4">
@@ -310,7 +373,13 @@
                       <i class="fa-brands fa-js"></i>
                     </div>
                     <div>
-                      <button class="btn-preview"><a href="https://github.com/wahyuindra11/stock_app_pempi" target="_blank">Source Code</a></button>
+                      <button class="btn-preview">
+                        <a
+                          href="https://github.com/wahyuindra11/stock_app_pempi"
+                          target="_blank"
+                          >Source Code</a
+                        >
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -320,26 +389,52 @@
 
           <!-- Navigation Buttons -->
         </div>
-        <button onclick="prevSlide()" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-l shadow-md">←</button>
-        <button onclick="nextSlide()" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-r shadow-md">→</button>
+        <button
+          onclick="prevSlide()"
+          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-l shadow-md"
+        >
+          ←
+        </button>
+        <button
+          onclick="nextSlide()"
+          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-r shadow-md"
+        >
+          →
+        </button>
       </section>
 
-      <section class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300">
+      <section
+        class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300"
+      >
         <h1 class="title">Thanks for coming!</h1>
 
         <div class="flex-col gap-4 text-center w-2/3 text-lg font-medium">
-          <p>I hope we can work together and create something that is not only big, but also meaningful and impactful.</p>
-          <br>
-          <p>If you’re working on an exciting project, need a partner, or just want to chat casually about technology (or vent about those pesky bugs you can’t seem to find), feel free to reach out.</p>
-          <br>
-          <p>Who knows, our conversation might be the start of the next awesome project. Cheers! 😄</p>
+          <p>
+            I hope we can work together and create something that is not only
+            big, but also meaningful and impactful.
+          </p>
+          <br />
+          <p>
+            If you’re working on an exciting project, need a partner, or just
+            want to chat casually about technology (or vent about those pesky
+            bugs you can’t seem to find), feel free to reach out.
+          </p>
+          <br />
+          <p>
+            Who knows, our conversation might be the start of the next awesome
+            project. Cheers! 😄
+          </p>
         </div>
       </section>
     </main>
 
-    <footer class="bg-gradient-to-b from-gray-950 to-gray-800 text-gray-200 text-center p-4">
-      <p>&copy; 2025 Alfa Indica Dzoriful Khazim - Made with code & some coffee</p>
-      <br>
+    <footer
+      class="bg-gradient-to-b from-gray-950 to-gray-800 text-gray-200 text-center p-4"
+    >
+      <p>
+        &copy; 2025 Alfa Indica Dzoriful Khazim - Made with code & some coffee
+      </p>
+      <br />
       <p class="mb-4">Got new idea? let's discuss it together!</p>
       <div class="text-4xl flex gap-6 justify-center items-center">
         <a href="https://www.linkedin.com/in/alfaindica/" target="_blank">
@@ -352,7 +447,7 @@
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
-      <br>
+      <br />
       <p class="italic">&quot;Copy, Paste, and run it!&quot;</p>
     </footer>
 
