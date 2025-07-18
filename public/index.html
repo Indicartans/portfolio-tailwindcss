@@ -9,12 +9,9 @@
     <link rel="icon" href="src/img/putih.png" type="image/png" sizes="16x16" />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- fontawesome -->
     <script
@@ -27,7 +24,9 @@
     <header>
       <nav class="w-full md:flex fixed top-0 right-0 left-0 z-50 md:px-4 text-white bg-gray-800 md:w-2/3 md:mx-auto md:rounded-2xl md:top-4">
         <div class="container mx-auto flex justify-between items-center p-4">
+          <a href="">
             <img src="src/img/putih.png" alt="logo" class="w-10 h-10"/>
+          </a>
             <button onclick="showMobileMenu()" class="text-2xl md:hidden">
               <i id="menu-button" class="fa-solid fa-bars"></i>
             </button>
@@ -71,30 +70,30 @@
     <main>
       <!-- hero section -->
       <section
-        class="section relative flex-col overflow-hidden gap-20 justify-end items-center bg-gray-800"
+        class="section relative flex-col overflow-hidden gap-4 justify-center items-center bg-gray-800"
         id="home"
       >
         <div
-          class="absolute bottom-10 left-1/4 w-96 h-96 bg-blue-500 opacity-30 rounded-3xl blur-3xl transform animate-spin-slow"
+          class="absolute top-1/2 -translate-y-1/2 left-1/4 w-96 h-96 bg-blue-500 opacity-30 rounded-3xl blur-3xl transform animate-spin-slow"
         ></div>
         <div
-          class="absolute bottom-10 right-1/4 w-96 h-96 bg-red-500 opacity-20 rounded-2xl blur-3xl animate-spin-slow-reverse"
+          class="absolute top-1/2 -translate-y-1/2 right-1/4 w-96 h-96 bg-red-500 opacity-20 rounded-2xl blur-3xl animate-spin-slow-reverse"
         ></div>
-        <div class="decoration-icon -rotate-12 bottom-1/4 left-1/4">
-          <img class="w-10" src="src/img/dev.png" alt="dev icon" />
+        <div class="decoration-icon -rotate-12 top-1/3 left-10 md:left-1/4 md:top-auto">
+          <img class="w-5 md:w-7" src="src/img/dev.png" alt="dev icon" />
         </div>
-        <div class="decoration-icon rotate-12 right-40 bottom-1/3">
-          <img class="w-10" src="src/img/dino.png" alt="dev icon" />
+        <div class="decoration-icon rotate-12 right-10 bottom-1/3 md:right-1/4">
+          <img class="w-5 md:w-7" src="src/img/dino.png" alt="dino icon" />
         </div>
-        <div class="decoration-icon rotate-12 bottom-20 left-40">
-          <img class="w-10" src="src/img/termux.png" alt="termux" />
+        <div class="decoration-icon rotate-12 bottom-1/3 left-5 md:left-1/4">
+          <img class="w-5 md:w-7" src="src/img/termux.png" alt="termux" />
         </div>
-        <div class="decoration-icon -rotate-12 bottom-20 right-1/4">
-          <img class="w-10" src="src/img/www.png" alt="termux" />
+        <div class="decoration-icon -rotate-12 top-1/3 right-14 md:right-1/4 md:top-auto">
+          <img class="w-5 md:w-7" src="src/img/www.png" alt="www icon" />
         </div>
 
         <div
-          class="text-4xl font-medium text-gray-200 text-center flex flex-col gap-4"
+          class="text-xl md:text-2xl lg:text-3xl font-medium text-gray-200 text-center flex flex-col gap-1 px-2"
         >
           <h1>
             i'm
@@ -102,17 +101,32 @@
               >Alfa Indica Dzoriful Khazim</span
             >
           </h1>
-          <h1>Web Developer</h1>
+          <p class="text-sm md:text-md lg:text-xl">a <span class="text-lime-200 text-shadow-md font-black">Web Developer</span> who turns ideas into interactive digital experiences</p>
+          <div>
+            <button class="mt-2 text-base p-2 rounded-xl font-bold bg-lime-200 text-gray-800"><a href="#about">Behind The Screen</a></button>
+          </div>
         </div>
         <div class="relative flex justify-center w-full">
-          <img
-            class="max-w-full"
-            src="src/img/profile.png"
-            alt="image profile"
-          />
-          <div
-            class="w-full h-1/2 absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-800 to-transparent"
-          ></div>
+          <div class="relative">
+            <img
+              class="max-w-[300px]"
+              src="src/img/profile.png"
+              alt="image profile"
+            />
+            <div class="h-fit absolute -bottom-10 left-0 right-0 bg-gray-800 rounded-lg -rotate-1 font-courier text-gray-300 text-[10px] p-2 light-shadow">
+              <div class="flex gap-1 mb-1 items-center">
+                <div class="w-2 h-2 bg-red-700 rounded-full"></div>
+                <div class="w-2 h-2 bg-yellow-300 rounded-full"></div>
+                <div class="w-2 h-2 bg-green-600 rounded-full"></div>
+                <p> /Users/Alfaindica</p>
+              </div>
+              <hr class="mb-1 border-gray-600" />
+              <p>> introduction.<span class="text-lime-200">run()</span></p>
+              <p> <span class="text-green-500">[INFO]</span> Hello, world. I am Alfa Indica a web developer</p>
+              <p> <span class="text-yellow-500">[WARNING]</span> Burnout detected: coding for too long without a break</p>
+              <p> <span class="text-red-500">[ERROR]</span> Application crashed, Opening fesnuk for no reason...</p>
+            </div>
+          </div>
         </div>
       </section>
 
