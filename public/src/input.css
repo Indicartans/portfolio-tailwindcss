@@ -20,7 +20,7 @@
 }
 
 .experiences-card {
-  @apply bg-gray-800 flex gap-2 p-4 rounded-xl max-w-4xl justify-between;
+  @apply bg-gray-800 flex items-center gap-2 p-2 max-w-4xl justify-between;
 }
 
 @keyframes spin-slow {
