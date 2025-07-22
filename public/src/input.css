@@ -14,6 +14,7 @@
   @apply shadow-[0_0_35px_rgba(210,210,210,0.2)];
 }
 
+/* properti */
 .title {
   @apply text-2xl md:text-3xl lg:text-4xl text-lime-200 font-black;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -21,6 +22,10 @@
 
 .experiences-card {
   @apply bg-gray-800 flex items-center gap-2 p-2 max-w-4xl justify-between;
+}
+
+.button {
+  @apply bg-lime-200 text-sm text-gray-950 p-2 rounded-md font-semibold;
 }
 
 @keyframes spin-slow {
@@ -73,5 +78,6 @@
 }
 
 .card-project {
-  @apply bg-gray-800 text-gray-300 rounded-2xl py-6;
+  @apply bg-gray-800 p-2 rounded-md;
 }
+

@@ -1,12 +1,6 @@
 let currentIndex = 0;
 const slider = document.getElementById("slider");
-const totalSlides = slider.children.length;
 let isShowMobileMenu = false;
-
-function updateSliderPosition() {
-  const slideWidth = slider.parentElement.offsetWidth;
-  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
 
 function nextSlide() {
   if (currentIndex < totalSlides - 1) {
@@ -21,9 +15,6 @@ function prevSlide() {
     updateSliderPosition();
   }
 }
-
-window.addEventListener("resize", updateSliderPosition);
-window.addEventListener("load", updateSliderPosition);
 
 function showMobileMenu() {
   const menu = document.getElementById("mobile-menu");

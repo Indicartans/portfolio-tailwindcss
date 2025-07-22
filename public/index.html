@@ -162,10 +162,7 @@
       </section>
 
       <!-- my skills -->
-      <section
-        class="section flex-col gap-4 bg-gray-950 justify-center items-center p-6"
-        id="skills"
-      >
+      <section class="section flex-col gap-4 bg-gray-950 justify-center items-center p-6" id="skills">
         <h1 class="title mb-4">MY SKILLS</h1>
         <div class="flex flex-wrap gap-2 md:gap-4 lg:gap-8 justify-center">
           <div class="bg-gray-800 p-4 rounded-lg light-shadow">
@@ -263,159 +260,43 @@
       </section>
 
       <!-- project -->
-      <section
-        class="relative section flex flex-col justify-center items-center gap-4 bg-gray-950 text-gray-300 p-4"
-        id="project"
-      >
+      <section class="relative h-fit flex flex-col justify-center items-center gap-4 bg-gray-950 text-gray-300 p-4" id="project">
         <h1 class="title">What I've Built</h1>
 
-        <!-- Wrapper Carousel -->
-        <div
-          class="relative w-full max-w-6xl mx-auto overflow-hidden max-h-[500px]"
-        >
-          <!-- Track Slide -->
-          <div
-            id="slider"
-            class="flex transition-transform duration-500 ease-in-out w-full"
-          >
-            <!-- Project 1: Asta Smart Parking -->
-            <div
-              class="card-project card-project w-full shrink-0 flex justify-center px-4"
-            >
-              <div class="flex justify-center gap-4 items-center">
-                <div class="w-1/3">
-                  <img
-                    class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4"
-                    src="src/img/project/asta-parking.png"
-                    alt="asta-parking-image"
-                  />
-                </div>
-                <div class="w-2/3">
-                  <h1 class="title-project">Asta Smart Parking</h1>
-                  <p class="text-justify">
-                    Developed REST APIs for LPR-based automatic parking system,
-                    integrating with embedded systems and mobile apps. Also
-                    built web-based financial reports and optimized SQL queries
-                    for better server performance.
-                  </p>
-                  <div class="flex flex-col gap-2 w-full justify-start">
-                    <div class="flex gap-2 items-center mt-4">
-                      <p class="text-sm font-semibold">Developed with:</p>
-                      <i class="fa-brands fa-laravel"></i>
-                      <i class="fa-brands fa-bootstrap"></i>
-                      <i class="fa-brands fa-js"></i>
-                    </div>
-                    <div>
-                      <!-- <button class="btn-preview"><a href="#">Show Preview</a></button> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl">
+          <!-- asta parking -->
+          <div class="card-project">
+            <div class="flex items-center w-full h-48 overflow-hidden rounded-lg">
+              <img src="src/img/project/parking.jpg" alt="Asta Parking Project" />
             </div>
-
-            <!-- sipenting -->
-            <div
-              class="card-project card-project w-full shrink-0 flex justify-center px-4"
-            >
-              <div class="flex justify-center gap-4 items-center">
-                <div class="w-1/3">
-                  <img
-                    class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4"
-                    src="src/img/project/sipenting.png"
-                    alt="asta-parking-image"
-                  />
-                </div>
-                <div class="w-2/3">
-                  <h1 class="title-project">Sipenting</h1>
-                  <p class="text-justify">
-                    A web-based expert system application that can diagnose
-                    potential stunting in children based on symptoms entered by
-                    users. This is my final project at Semarang State
-                    Polytechnic and was developed using the Certainty Factor
-                    method.
-                  </p>
-                  <div class="flex flex-col gap-2 w-full justify-start">
-                    <div class="flex gap-2 items-center mt-4">
-                      <p class="text-sm font-semibold">Developed with:</p>
-                      <i class="fa-brands fa-laravel"></i>
-                      <i class="fa-brands fa-bootstrap"></i>
-                      <i class="fa-brands fa-js"></i>
-                    </div>
-                    <div>
-                      <button class="btn-preview">
-                        <a
-                          href="https://github.com/Indicartans/SiPenting_Sistem-pakar-pendeteksi-stunting  "
-                          target="_blank"
-                          >Source Code</a
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- pemapistock -->
-            <div
-              class="card-project card-project w-full shrink-0 flex justify-center px-4"
-            >
-              <div class="flex justify-center gap-4 items-center">
-                <div class="w-1/3">
-                  <img
-                    class="w-full max-w-[500px] h-auto object-contain shadow-md mb-4"
-                    src="src/img/project/pemapi.png"
-                    alt="asta-parking-image"
-                  />
-                </div>
-                <div class="w-2/3">
-                  <h1 class="title-project">Pemapistock</h1>
-                  <p class="text-justify">
-                    Developed a warehouse management system for inventory,
-                    purchasing, and sales at PT Coco Profire Indonesia. Includes
-                    real-time stock tracking, goods receipt management, and
-                    detailed transaction reports.
-                  </p>
-                  <div class="flex flex-col gap-2 w-full justify-start">
-                    <div class="flex gap-2 items-center mt-4">
-                      <p class="text-sm font-semibold">Developed with:</p>
-                      <i class="fa-brands fa-laravel"></i>
-                      <i class="fa-brands fa-bootstrap"></i>
-                      <i class="fa-brands fa-js"></i>
-                    </div>
-                    <div>
-                      <button class="btn-preview">
-                        <a
-                          href="https://github.com/wahyuindra11/stock_app_pempi"
-                          target="_blank"
-                          >Source Code</a
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h2 class="text-lg font-bold">Asta Smart Parking</h2>
+            <p class="text-sm mb-2">Asta Smart Parking is a smart parking system with license plate recognition and manless gate.</p>
+            <button class="button">Show Details</button>
           </div>
 
-          <!-- Navigation Buttons -->
+          <!-- sipenting -->
+          <div class="card-project">
+            <div class="flex items-center w-full h-48 overflow-hidden rounded-lg">
+              <img src="src/img/project/sipenting.jpg" alt="Sipenting Project" />
+            </div>
+            <h2 class="text-lg font-bold">Sipenting</h2>
+            <p class="text-sm mb-2">Sipenting is an expert system for detecting possible stunting based on symptoms experienced by users.</p>
+            <button class="button">Show Details</button>
+          </div>
+
+          <!-- pemapistock -->
+          <div class="card-project">
+            <div class="flex items-center w-full h-48 overflow-hidden rounded-lg">
+              <img src="src/img/project/pemapi.jpg" alt="Pemapistock Project" />
+            </div>
+            <h2 class="text-lg font-bold">Pemapistock</h2>
+            <p class="text-sm mb-2">Pemapistock is a web application for managing company product inventory with advanced features.</p>
+            <button class="button">Show Details</button>
+          </div>
         </div>
-        <button
-          onclick="prevSlide()"
-          class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-l shadow-md"
-        >
-          ←
-        </button>
-        <button
-          onclick="nextSlide()"
-          class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-gray-900 px-3 py-1 rounded-r shadow-md"
-        >
-          →
-        </button>
       </section>
 
-      <section
-        class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300"
-      >
+      <section class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300">
         <h1 class="title">Thanks for coming!</h1>
 
         <div class="flex-col gap-4 text-center w-2/3 text-lg font-medium">
