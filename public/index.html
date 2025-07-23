@@ -22,7 +22,7 @@
 
   <body class="scroll-smooth">
     <header>
-      <nav class="w-full md:flex fixed top-0 right-0 left-0 z-50 md:px-4 text-white bg-gray-800 md:w-2/3 md:mx-auto md:rounded-2xl md:top-4">
+      <nav class="w-full md:flex fixed top-0 right-0 left-0 z-40 md:px-4 text-white bg-gray-800 md:w-2/3 md:mx-auto md:rounded-2xl md:top-4">
         <div class="container mx-auto flex justify-between items-center p-4">
           <a href="">
             <img src="src/img/putih.png" alt="logo" class="w-10 h-10"/>
@@ -32,7 +32,7 @@
             </button>
         </div>
         <div class="hidden md:flex justify-center items-center text-lg">
-          <ul class="flex gap-4">
+          <ul class="flex gap-2">
             <li>
               <a href="#about">About</a>
             </li>
@@ -44,6 +44,9 @@
             </li>
             <li>
               <a href="#project">Projects</a>
+            </li>
+            <li>
+              <a href="#certification">Certification</a>
             </li>
           </ul>
         </div>
@@ -61,6 +64,9 @@
             </li>
             <li>
               <a href="#project">Projects</a>
+            </li>
+            <li>
+              <a href="#certification">Certification</a>
             </li>
           </ul>
         </div>
@@ -206,6 +212,12 @@
           <div class="bg-gray-800 p-4 rounded-lg light-shadow">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/figma.png" alt="Figma" />
           </div>
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+            <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/mysql.svg" alt="MySQL" />
+          </div>
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+            <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/postgresql.png" alt="postgresql" />
+          </div>
         </div>
       </section>
 
@@ -271,7 +283,7 @@
             </div>
             <h2 class="text-lg font-bold">Asta Smart Parking</h2>
             <p class="text-sm mb-2">Asta Smart Parking is a smart parking system with license plate recognition and manless gate.</p>
-            <button class="button">Show Details</button>
+            <button class="button" onclick="openModal('astaParkingModal')">Show Details</button>
           </div>
 
           <!-- sipenting -->
@@ -281,7 +293,7 @@
             </div>
             <h2 class="text-lg font-bold">Sipenting</h2>
             <p class="text-sm mb-2">Sipenting is an expert system for detecting possible stunting based on symptoms experienced by users.</p>
-            <button class="button">Show Details</button>
+            <button class="button" onclick="openModal('sipentingModal')">Show Details</button>
           </div>
 
           <!-- pemapistock -->
@@ -291,10 +303,46 @@
             </div>
             <h2 class="text-lg font-bold">Pemapistock</h2>
             <p class="text-sm mb-2">Pemapistock is a web application for managing company product inventory with advanced features.</p>
-            <button class="button">Show Details</button>
+            <button class="button" onclick="openModal('pemapistockModal')">Show Details</button>
           </div>
         </div>
       </section>
+
+      <!-- <section id="certification" class="flex bg-gray-950 text-gray-300 flex-col justify-center items-center p-6">
+        <h1 class="title mb-4">Certified Excellence</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow flex flex-col">
+            <div class="h-48 overflow-hidden rounded-lg my-2">
+              <img class="w-full h-48 object-cover rounded-lg" src="src/img/certification/dasar-pemrograman-js.jpg" alt="Dasar pemrograman JS" />
+            </div>
+            <h2 class="text-lg font-bold">Basics of JavaScript Programming</h2>
+            <p class="text-sm mb-4">Complete basic JavaScript training covering programming concepts 
+              such as variables, data types, functions, branching, loops, arrays, objects, and asynchronous programming (callbacks 
+              and promises)
+            </p>
+            <div class="flex-grow"></div>
+            <div class="flex items-end">
+              <a class="button" href="https://drive.google.com/file/d/1-5vxSlc0-KncZdWb65DGLC4-YbMLsWkT/view?usp=sharing" target="_blank">Show Details</a>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow flex flex-col">
+            <div class="h-48 overflow-hidden rounded-lg my-2">
+              <img class="w-full h-48 object-cover rounded-lg" src="src/img/certification/dasar-pemrograman-js.jpg" alt="Dasar pemrograman JS" />
+            </div>
+            <h2 class="text-lg font-bold">MikroTik Cerified Network Associate (MTCNA)</h2>
+            <p class="text-sm mb-4">Official certification proving the ability to configure, 
+                troubleshoot, and manage MikroTik-based networks.
+            </p>
+            <div class="flex-grow"></div>
+            <div class="flex items-end mt-4">
+              <a class="button" href="https://drive.google.com/file/d/1-5vxSlc0-KncZdWb65DGLC4-YbMLsWkT/view?usp=sharing" target="_blank">Show Details</a>
+            </div>
+          </div>
+          
+        </div>
+      </section> -->
 
       <section class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300">
         <h1 class="title">Thanks for coming!</h1>
@@ -341,6 +389,11 @@
       <br />
       <p class="italic">&quot;Copy, Paste, and run it!&quot;</p>
     </footer>
+
+    <!-- Modal -->
+    <div id="astaParkingModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-start pt-20 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+    <div id="sipentingModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-start pt-20 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+    <div id="pemapistockModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-start pt-20 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
     <script src="script.js"></script>
   </body>

@@ -2,20 +2,6 @@ let currentIndex = 0;
 const slider = document.getElementById("slider");
 let isShowMobileMenu = false;
 
-function nextSlide() {
-  if (currentIndex < totalSlides - 1) {
-    currentIndex++;
-    updateSliderPosition();
-  }
-}
-
-function prevSlide() {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSliderPosition();
-  }
-}
-
 function showMobileMenu() {
   const menu = document.getElementById("mobile-menu");
   const menuButton = document.getElementById("menu-button");
@@ -33,4 +19,56 @@ function showMobileMenu() {
     menuButton.classList.remove("fa-solid", "fa-xmark");
     menuButton.classList.add("fa-solid", "fa-bars");
   }
+}
+
+// panggil modal ke index
+// asta-parking modal
+fetch("modal/asta-parking-modal.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.getElementById("astaParkingModal").innerHTML = html;
+  });
+
+// sipenting modal
+fetch("modal/sipenting-modal.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.getElementById("sipentingModal").innerHTML = html;
+  });
+
+// pemapistock modal
+fetch("modal/pemapistock-modal.html")
+  .then((response) => response.text())
+  .then((html) => {
+    document.getElementById("pemapistockModal").innerHTML = html;
+  });
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  const content = document.getElementById(`${modalId}Content`);
+
+  modal.classList.remove("opacity-0", "pointer-events-none");
+  modal.classList.add("opacity-100");
+
+  // Reset animasi skala dulu
+  content.classList.remove("scale-100");
+  content.classList.add("scale-95");
+
+  // Jalankan animasi di frame selanjutnya
+  requestAnimationFrame(() => {
+    content.classList.remove("scale-95");
+    content.classList.add("scale-100");
+  });
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  const content = document.getElementById(`${modalId}Content`);
+
+  // Jalankan animasi keluar
+  content.classList.remove("scale-100");
+  content.classList.add("scale-95");
+
+  modal.classList.remove("opacity-100");
+  modal.classList.add("opacity-0", "pointer-events-none");
 }
