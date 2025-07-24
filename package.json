@@ -2,7 +2,7 @@
   "name": "portfolio-tailwindcss",
   "version": "1.0.0",
   "scripts": {
-    "dev":   "tailwindcss -i ./public/src/input.css -o ./public/output.css --watch",
+    "dev": "tailwindcss -i ./public/src/input.css -o ./public/output.css --watch",
     "build": "tailwindcss -i ./public/src/input.css -o ./public/output.css --minify",
     "postinstall": "chmod +x ./node_modules/.bin/tailwindcss"
   },
@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2"
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "motion": "^12.23.9"
   }
 }

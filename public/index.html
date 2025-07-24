@@ -18,6 +18,11 @@
       src="https://kit.fontawesome.com/ee542f3def.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- typeit -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
   </head>
 
   <body class="scroll-smooth">
@@ -31,42 +36,42 @@
               <i id="menu-button" class="fa-solid fa-bars"></i>
             </button>
         </div>
-        <div class="hidden md:flex justify-center items-center text-lg font-semibold">
+        <div class="hidden md:flex justify-center items-center text-lg text-gray-400">
           <ul class="flex gap-2">
             <li>
-              <a href="#about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#experiences">Experiences</a>
+              <a class="nav-link" href="#experiences">Experiences</a>
             </li>
             <li>
-              <a href="#project">Projects</a>
+              <a class="nav-link" href="#project">Projects</a>
             </li>
             <li>
-              <a href="#certification">Certification</a>
+              <a class="nav-link" href="#certification">Certification</a>
             </li>
           </ul>
         </div>
 
-        <div id="mobile-menu" class="absolute w-full z-10 text-white bg-gray-800 text-center py-4 transform -translate-y-[400px] transition-transform duration-500 md:hidden">
+        <div id="mobile-menu" class="absolute w-full z-10 text-gray-400 bg-gray-800 text-center py-4 transform -translate-y-[400px] transition-transform duration-500 md:hidden">
           <ul class="flex flex-col justify-between items-center gap-4">
             <li>
-              <a href="#about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#experiences">Experiences</a>
+              <a class="nav-link" href="#experiences">Experiences</a>
             </li>
             <li>
-              <a href="#project">Projects</a>
+              <a class="nav-link" href="#project">Projects</a>
             </li>
             <li>
-              <a href="#certification">Certification</a>
+              <a class="nav-link" href="#certification">Certification</a>
             </li>
           </ul>
         </div>
@@ -85,20 +90,20 @@
         <div
           class="absolute top-1/2 -translate-y-1/2 right-1/4 w-96 h-96 bg-red-500 opacity-20 rounded-2xl blur-3xl animate-spin-slow-reverse"
         ></div>
-        <div class="decoration-icon -rotate-12 top-1/3 left-10 md:left-1/4 md:top-auto">
+        <div class="decoration-icon -rotate-12 top-1/3 left-10 md:left-1/4 md:top-auto animate-spin-slow">
           <img class="w-5 md:w-7" src="src/img/dev.png" alt="dev icon" />
         </div>
-        <div class="decoration-icon rotate-12 right-10 bottom-1/3 md:right-1/4">
+        <div class="decoration-icon rotate-12 right-10 bottom-1/3 md:right-1/4 animate-spin-slow">
           <img class="w-5 md:w-7" src="src/img/dino.png" alt="dino icon" />
         </div>
-        <div class="decoration-icon rotate-12 bottom-1/3 left-5 md:left-1/4">
+        <div class="decoration-icon rotate-12 bottom-1/3 left-5 md:left-1/4 animate-spin-slow-reverse">
           <img class="w-5 md:w-7" src="src/img/termux.png" alt="termux" />
         </div>
-        <div class="decoration-icon -rotate-12 top-1/3 right-14 md:right-1/4 md:top-auto">
+        <div class="decoration-icon -rotate-12 top-1/3 right-14 md:right-1/4 md:top-auto animate-spin-slow-reverse">
           <img class="w-5 md:w-7" src="src/img/www.png" alt="www icon" />
         </div>
 
-        <div
+        <div id="introduction"
           class="text-xl md:text-2xl lg:text-3xl font-medium text-gray-200 text-center flex flex-col gap-1 px-2"
         >
           <h1>
@@ -109,7 +114,7 @@
           </h1>
           <p class="text-sm md:text-md lg:text-xl">a <span class="text-lime-200 text-shadow-md font-black">Web Developer</span> who turns ideas into interactive digital experiences</p>
           <div>
-            <button class="mt-2 text-base p-2 rounded-xl font-bold bg-lime-200 text-gray-800"><a href="#about">Behind The Screen</a></button>
+            <button class="mt-2 text-base p-2 rounded-xl font-bold bg-lime-200 text-gray-800 hover:border-2 hover:border-lime-200 hover:text-gray-300 hover:scale-105 hover:bg-gray-800 transition-all duration-300"><a href="#about">Behind The Screen</a></button>
           </div>
         </div>
         <div class="relative flex justify-center w-full">
@@ -127,10 +132,7 @@
                 <p> /Users/Alfaindica</p>
               </div>
               <hr class="mb-1 border-gray-600" />
-              <p>> introduction.<span class="text-lime-200">run()</span></p>
-              <p> <span class="text-green-500">[INFO]</span> Hello, world. I am Alfa Indica a web developer</p>
-              <p> <span class="text-yellow-500">[WARNING]</span> Burnout detected: coding for too long without a break</p>
-              <p> <span class="text-red-500">[ERROR]</span> Application crashed, Opening fesnuk for no reason...</p>
+              <p id="terminal" class="terminal"></p>
             </div>
           </div>
         </div>
@@ -142,10 +144,10 @@
         id="about"
       >
         <div
-          class="text-center text-gray-200 flex flex-col gap-4"
+          class="text-center text-gray-200 flex flex-col gap-4 overflow-hidden"
         >
           <h1 class="title">WHO AM I?</h1>
-          <p class="text-sm md:text-base lg:text-lg">
+          <p class="description-1 text-sm md:text-base lg:text-lg">
             An experienced Web Developer specializing in building dynamic and
             efficient web applications using Laravel, PHP, and JavaScript.
             Skilled in designing and developing RESTful APIs for
@@ -156,7 +158,7 @@
             performance and security.
           </p>
 
-          <p class="text-sm md:text-base lg:text-lg">
+          <p class="description-2 text-sm md:text-base lg:text-lg">
             In addition, I am always enthusiastic about learning the latest
             technological developments to continuously improve quality and
             efficiency in web development. I have a strong work ethic, adapt
@@ -171,51 +173,51 @@
       <section class="section flex-col gap-4 bg-gray-950 justify-center items-center p-6" id="skills">
         <h1 class="title mb-4">MY SKILLS</h1>
         <div class="flex flex-wrap gap-2 md:gap-4 lg:gap-8 justify-center">
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/html.svg" alt="HTML" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/css.svg" alt="CSS" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/laravel.svg" alt="Laravel" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/js.svg" alt="JavaScript" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/php.png" alt="PHP" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/github.svg" alt="GitHub" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img
               class="w-12 md:w-24 lg:w-28"
               src="src/img/skills/bootstrap.png"
               alt="Bootstrap"
             />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img
               class="w-12 md:w-24 lg:w-28"
               src="src/img/skills/tailwindcss.png"
               alt="Tailwind"
             />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/git.png" alt="Git" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/node-js.png" alt="NodeJS" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/figma.png" alt="Figma" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/mysql.svg" alt="MySQL" />
           </div>
-          <div class="bg-gray-800 p-4 rounded-lg light-shadow">
+          <div class="bg-gray-800 p-4 rounded-lg light-shadow skills">
             <img class="w-12 md:w-24 lg:w-28" src="src/img/skills/postgresql.png" alt="postgresql" />
           </div>
         </div>
@@ -225,7 +227,7 @@
       <section class="section bg-gray-950 flex-col justify-center items-center p-2" id="experiences">
         <h1 class="title mb-8">Work Experiences</h1>
           <div class="flex mb-2 md:mb-4 items-center gap-2">
-            <div class="experiences-card text-gray-100">
+            <div class="experiences-card text-gray-100" id="card1">
               <div>
                 <img class="max-w-12 md:max-w-20 lg:max-w-32" src="src/img/experiences/abarobotics.png" alt="abarobotics"/>
               </div>
@@ -247,7 +249,7 @@
             </div>
           </div>
 
-          <div class="flex justify-between items-center gap-2 mb-2 md:mb-4">
+          <div class="flex justify-between items-center gap-2 mb-2 md:mb-4" id="card2">
             <div class="experiences-card light-shadow text-gray-100">
               <div>
                 <img class="max-w-12 md:max-w-20 lg:max-w-32" src="src/img/experiences/pemapi.png" alt="pemapi"/>
@@ -279,7 +281,7 @@
           <!-- asta parking -->
           <div class="card-project">
             <div class="flex items-center w-full h-48 overflow-hidden rounded-lg">
-              <img src="src/img/project/parking.jpg" alt="Asta Parking Project" />
+              <img class="hover:scale-110 transition-all duration-300" src="src/img/project/parking.jpg" alt="Asta Parking Project" />
             </div>
             <h2 class="text-lg font-bold">Asta Smart Parking</h2>
             <p class="text-sm mb-2">Asta Smart Parking is a smart parking system with license plate recognition and manless gate.</p>
@@ -289,7 +291,7 @@
           <!-- sipenting -->
           <div class="card-project">
             <div class="flex items-center w-full h-48 overflow-hidden rounded-lg">
-              <img src="src/img/project/sipenting.jpg" alt="Sipenting Project" />
+              <img class="hover:scale-110 transition-all duration-300" src="src/img/project/sipenting.jpg" alt="Sipenting Project" />
             </div>
             <h2 class="text-lg font-bold">Sipenting</h2>
             <p class="text-sm mb-2">Sipenting is an expert system for detecting possible stunting based on symptoms experienced by users.</p>
@@ -299,7 +301,7 @@
           <!-- pemapistock -->
           <div class="card-project">
             <div class="flex items-center w-full h-48 overflow-hidden rounded-lg">
-              <img src="src/img/project/pemapi.jpg" alt="Pemapistock Project" />
+              <img class="hover:scale-110 transition-all duration-300" src="src/img/project/pemapi.jpg" alt="Pemapistock Project" />
             </div>
             <h2 class="text-lg font-bold">Pemapistock</h2>
             <p class="text-sm mb-2">Pemapistock is a web application for managing company product inventory with advanced features.</p>
@@ -411,5 +413,6 @@
     <div id="pemapistockModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-start pt-20 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
 
     <script src="script.js"></script>
+    <script type="module" src="./animation.js"></script>
   </body>
 </html>

@@ -25,7 +25,11 @@
 }
 
 .button {
-  @apply bg-lime-200 text-sm text-gray-950 p-2 rounded-md font-semibold;
+  @apply bg-lime-200 text-sm text-gray-950 p-2 rounded-md font-semibold hover:outline hover:outline-lime-200 hover:text-gray-300 hover:bg-transparent transition-all duration-300;
+}
+
+.nav-link {
+  @apply transition-all duration-300 hover:text-gray-300 hover:font-semibold;
 }
 
 @keyframes spin-slow {
