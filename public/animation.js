@@ -30,6 +30,14 @@ inView("#introduction div", (element) => {
   );
 });
 
+inView(".hero-image", (element) => {
+  animate(element, { opacity: [0, 1], y: [50, 0] }, { duration: 0.9 });
+});
+
+inView(".decoration-icon", (element) => {
+  animate(element, { opacity: [0, 1] }, { duration: 2 });
+});
+
 // terminal
 new TypeIt("#terminal", {
   speed: 50,
@@ -110,3 +118,26 @@ inView(".card-project", (element) => {
     { duration: 0.9, easing: easeOut }
   );
 });
+
+// certification
+inView(".certification", (element) => {
+  animate(
+    element,
+    { opacity: [0, 1], y: [50, 0] },
+    { duration: 0.9, easing: easeOut }
+  );
+});
+
+// closing
+inView(".closing", (element) => {
+  animate(element, { opacity: [0, 1], y: [50, 0] }, { duration: 0.9 });
+});
+
+// footer
+inView(".footer", (element) => {
+  animate(
+    element,
+    {opacity: [0,1], y:[50,0]},
+    {duration: 0.9, easing: easeOut}
+  )
+})

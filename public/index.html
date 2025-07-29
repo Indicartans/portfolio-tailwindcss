@@ -106,18 +106,18 @@
         <div id="introduction"
           class="text-xl md:text-2xl lg:text-3xl font-medium text-gray-200 text-center flex flex-col gap-1 px-2"
         >
-          <h1>
+          <h1 class="opacity-0">
             i'm
             <span class="text-lime-200 text-shadow-md font-black"
               >Alfa Indica Dzoriful Khazim</span
             >
           </h1>
-          <p class="text-sm md:text-md lg:text-xl">a <span class="text-lime-200 text-shadow-md font-black">Web Developer</span> who turns ideas into interactive digital experiences</p>
-          <div>
+          <p class="text-sm opacity-0 md:text-md lg:text-xl">a <span class="text-lime-200 text-shadow-md font-black">Web Developer</span> who turns ideas into interactive digital experiences</p>
+          <div class="opacity-0">
             <button class="mt-2 text-base p-2 rounded-xl font-bold bg-lime-200 text-gray-800 hover:border-2 hover:border-lime-200 hover:text-gray-300 hover:scale-105 hover:bg-gray-800 transition-all duration-300"><a href="#about">Behind The Screen</a></button>
           </div>
         </div>
-        <div class="relative flex justify-center w-full">
+        <div class="relative flex justify-center w-full hero-image">
           <div class="relative">
             <img
               class="max-w-[300px]"
@@ -147,7 +147,7 @@
           class="text-center text-gray-200 flex flex-col gap-4 overflow-hidden"
         >
           <h1 class="title">WHO AM I?</h1>
-          <p class="description-1 text-sm md:text-base lg:text-lg">
+          <p class="opacity-0 description-1 text-sm md:text-base lg:text-lg">
             An experienced Web Developer specializing in building dynamic and
             efficient web applications using Laravel, PHP, and JavaScript.
             Skilled in designing and developing RESTful APIs for
@@ -158,7 +158,7 @@
             performance and security.
           </p>
 
-          <p class="description-2 text-sm md:text-base lg:text-lg">
+          <p class="opacity-0 description-2 text-sm md:text-base lg:text-lg">
             In addition, I am always enthusiastic about learning the latest
             technological developments to continuously improve quality and
             efficiency in web development. I have a strong work ethic, adapt
@@ -314,7 +314,7 @@
         <h1 class="title mb-4">Certified Excellence</h1>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl">
-          <div class="relative h-64 w-full rounded-lg light-shadow group overflow-hidden">
+          <div class="certification group">
             <img src="src/img/certification/dasar-pemrograman-js.jpg" alt="dasar-pemrograman-js" class="object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110 group-hover:brightness-50"/>
             
             <div class="absolute inset-0 opacity-0 text-gray-200 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 flex flex-col justify-end items-start p-4 transition-all duration-500 ease-in-out">
@@ -326,7 +326,7 @@
             </div>
           </div>
 
-          <div class="relative h-64 w-full rounded-lg light-shadow group overflow-hidden">
+          <div class="certification group">
             <img src="src/img/certification/big-data.jpg" alt="Big Data" class="object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110 group-hover:brightness-50"/>
             
             <div class="absolute inset-0 opacity-0 text-gray-200 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 flex flex-col justify-end items-start p-4 transition-all duration-500 ease-in-out">
@@ -337,7 +337,7 @@
             </div>
           </div>
 
-          <div class="relative h-64 w-full rounded-lg light-shadow group overflow-hidden">
+          <div class="certification group">
             <img src="src/img/certification/mtcna.jpg" alt="MTCNA" class="object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110 group-hover:brightness-50"/>
             
             <div class="absolute inset-0 opacity-0 text-gray-200 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 flex flex-col justify-end items-start p-4 transition-all duration-500 ease-in-out">
@@ -349,7 +349,7 @@
             </div>
           </div>
 
-          <div class="relative h-64 w-full rounded-lg light-shadow group overflow-hidden">
+          <div class="certification group">
             <img src="src/img/certification/oracle-database-design.jpg" alt="MTCNA" class="object-cover rounded-t-lg transition-transform duration-300 group-hover:scale-110 group-hover:brightness-50"/>
             
             <div class="absolute inset-0 opacity-0 text-gray-200 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 flex flex-col justify-end items-start p-4 transition-all duration-500 ease-in-out">
@@ -364,19 +364,19 @@
       <section class="section flex-col gap-4 bg-gray-950 justify-center items-center text-gray-300">
         <h1 class="title">Thanks for coming!</h1>
 
-        <div class="flex-col gap-4 text-center w-2/3 text-lg font-medium">
-          <p>
+        <div class="flex-col gap-4 text-center w-2/3 text-lg font-medium ">
+          <p class="closing">
             I hope we can work together and create something that is not only
             big, but also meaningful and impactful.
           </p>
           <br />
-          <p>
+          <p class="closing">
             If you’re working on an exciting project, need a partner, or just
             want to chat casually about technology (or vent about those pesky
             bugs you can’t seem to find), feel free to reach out.
           </p>
           <br />
-          <p>
+          <p class="closing">
             Who knows, our conversation might be the start of the next awesome
             project. Cheers! 😄
           </p>
@@ -387,12 +387,12 @@
     <footer
       class="bg-gradient-to-b from-gray-950 to-gray-800 text-gray-200 text-center p-4"
     >
-      <p>
+      <p class="footer">
         &copy; 2025 Alfa Indica Dzoriful Khazim - Made with code & some coffee
       </p>
       <br />
-      <p class="mb-4">Got new idea? let's discuss it together!</p>
-      <div class="text-4xl flex gap-6 justify-center items-center">
+      <p class="mb-4 footer">Got new idea? let's discuss it together!</p>
+      <div class="text-4xl flex gap-6 justify-center items-center footer">
         <a class="hover:text-lime-200 transition-all duration-300 hover:scale-105" href="https://www.linkedin.com/in/alfaindica/" target="_blank">
           <i class="fa-brands fa-linkedin"></i>
         </a>
@@ -404,7 +404,7 @@
         </a>
       </div>
       <br />
-      <p class="italic">&quot;Copy, Paste, and run it!&quot;</p>
+      <p class="italic footer">&quot;Copy, Paste, and run it!&quot;</p>
     </footer>
 
     <!-- Modal -->

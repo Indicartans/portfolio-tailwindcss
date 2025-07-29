@@ -16,16 +16,20 @@
 
 /* properti */
 .title {
-  @apply text-2xl md:text-3xl lg:text-4xl text-lime-200 font-black;
+  @apply text-2xl md:text-3xl lg:text-4xl text-lime-200 font-black opacity-0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .experiences-card {
-  @apply bg-gray-800 flex items-center gap-2 p-2 max-w-4xl justify-between;
+  @apply bg-gray-800 flex items-center gap-2 p-2 max-w-4xl justify-between opacity-0;
 }
 
 .button {
   @apply bg-lime-200 text-sm text-gray-950 p-2 rounded-md font-semibold hover:outline hover:outline-lime-200 hover:text-gray-300 hover:bg-transparent transition-all duration-300;
+}
+
+.skills {
+  @apply scale-0;
 }
 
 .nav-link {
@@ -86,7 +90,22 @@
 }
 
 .card-project {
-  @apply bg-gray-800 p-4 rounded-md;
+  @apply bg-gray-800 p-4 rounded-md opacity-0;
+}
+
+/* certification */
+.certification {
+  @apply relative h-64 w-full rounded-lg shadow-[0_0_35px_rgba(210,210,210,0.2)] overflow-hidden opacity-0;
+}
+
+/* closing */
+.closing {
+  @apply opacity-0;
+}
+
+/* footer */
+.footer {
+  @apply opacity-0;
 }
 
 /* custom scrollbar */
