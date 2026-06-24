@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "tailwindcss -i ./public/src/input.css -o ./public/output.css --watch",
-    "build": "tailwindcss -i ./public/src/input.css -o ./public/output.css --minify",
-    "postinstall": "chmod +x ./node_modules/.bin/tailwindcss"
+    "build": "tailwindcss -i ./public/src/input.css -o ./public/output.css --minify"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"

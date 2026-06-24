@@ -1,35 +1,28 @@
-<div
-  id="sipentingModalContent"
-  class="bg-gray-800 text-gray-200 rounded-lg shadow-lg p-6 max-w-[90vw] mx-auto overflow-y-auto max-h-[80vh] custom-scrollbar transform transition-transform duration-300 scale-95"
->
-  <div class="">
-    <div class="flex justify-between items-center mb-2">
-      <h1 class="font-bold">SiPenting (Sistem Pendeteksi Stunting)</h1>
-      <button class="text-2xl" onclick="closeModal('sipentingModal')">
-        <i class="fa-solid fa-square-xmark"></i>
+<div id="sipentingModalContent" class="glass-light text-gray-200 rounded-2xl shadow-2xl p-6 max-w-[90vw] mx-auto overflow-y-auto max-h-[80vh] custom-scrollbar transform transition-transform duration-300 scale-95">
+  <div>
+    <div class="flex justify-between items-center mb-3">
+      <h1 class="font-bold text-lg gradient-text">Sipenting — Stunting Detection</h1>
+      <button class="text-xl text-gray-500 hover:text-red-400 transition-colors" onclick="closeModal('sipentingModal')">
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
 
     <div class="flex justify-center w-full">
-      <div class="h-48 overflow-hidden rounded-lg my-2">
-        <img
-          src="src/img/project/sipenting.jpg"
-          alt="Asta Smart Parking"
-          class=""
-        />
+      <div class="h-48 overflow-hidden rounded-xl my-2">
+        <img src="src/img/project/sipenting.jpg" alt="Sipenting" class="w-full object-cover" />
       </div>
     </div>
 
-    <div class="mb-2">
-      <h1 class="text-gray-400 font-semibold">Build With:</h1>
-      <div class="flex gap-1 items-center">
-        <img class="w-6" src="src/img/skills/laravel.svg" alt="laravel" />
-        <img class="w-8" src="src/img/skills/bootstrap.png" alt="bootstrap" />
-        <img class="w-10" src="src/img/skills/mysql.svg" alt="mysql" />
+    <div class="mb-3">
+      <h2 class="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">Built With</h2>
+      <div class="flex gap-2 flex-wrap">
+        <span class="tech-badge">Laravel</span>
+        <span class="tech-badge">Bootstrap</span>
+        <span class="tech-badge">MySQL</span>
       </div>
     </div>
 
-    <p>
+    <p class="text-sm text-gray-300 leading-relaxed">
       <strong>Sipenting (Stunting Detection Expert System)</strong> is a web-based application
       designed to help detect the possibility of stunting in children. This
       application uses the <strong>Certainty Factor (CF)</strong> method to analyse the symptoms
@@ -37,7 +30,7 @@
       possibility of stunting.
     </p>
 
-    <p>
+    <p class="text-sm text-gray-300 leading-relaxed mt-2">
       With a user-friendly interface and quick process, Sipenting provides
       diagnostic results along with suggestions or recommendations for actions
       that can be taken. The application aims to raise awareness and simplify
@@ -46,36 +39,16 @@
     </p>
 
     <div>
-      <h1 class="text-gray-400 my-2 font-semibold">Preview</h1>
-      <div
-        class="flex gap-2 w-full overflow-x-auto custom-scrollbar"
-      >
-        <img
-          class="w-48 md:w-96 lg:w-[30rem] object-contain"
-          src="src/img/project/preview/sipenting-1.png"
-          alt="preview sipenting-1"
-        />
-        <img
-          class="w-48 md:w-96 lg:w-[30rem] object-contain"
-          src="src/img/project/preview/sipenting-2.png"
-          alt="preview sipenting-2"
-        />
-        <img
-          class="w-48 md:w-96 lg:w-[30rem] object-contain"
-          src="src/img/project/preview/sipenting-3.png"
-          alt="preview sipenting-3"
-        />
-        <img
-          class="w-48 md:w-96 lg:w-[30rem] object-contain"
-          src="src/img/project/preview/sipenting-4.png"
-          alt="preview sipenting-4"
-        />
+      <h2 class="text-gray-500 text-xs font-semibold uppercase tracking-wider my-3">Preview</h2>
+      <div class="flex gap-3 w-full overflow-x-auto custom-scrollbar pb-2">
+        <img class="w-48 md:w-96 lg:w-[30rem] object-contain rounded-lg" src="src/img/project/preview/sipenting-1.png" alt="preview sipenting-1" />
+        <img class="w-48 md:w-96 lg:w-[30rem] object-contain rounded-lg" src="src/img/project/preview/sipenting-2.png" alt="preview sipenting-2" />
+        <img class="w-48 md:w-96 lg:w-[30rem] object-contain rounded-lg" src="src/img/project/preview/sipenting-3.png" alt="preview sipenting-3" />
+        <img class="w-48 md:w-96 lg:w-[30rem] object-contain rounded-lg" src="src/img/project/preview/sipenting-4.png" alt="preview sipenting-4" />
       </div>
     </div>
     <div class="flex justify-end mt-4">
-      <button class="btn-red" onclick="closeModal('sipentingModal')">
-        Close Details
-      </button>
+      <button class="btn-red" onclick="closeModal('sipentingModal')">Close</button>
     </div>
   </div>
 </div>
